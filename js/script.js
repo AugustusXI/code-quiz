@@ -13,8 +13,8 @@ let score = 0;
 let questions = questionList;
 let qI = 0;
 let timer = 75;
-let clockInterval = setInterval(setClock, 1000);
 let leaderboard = [];
+let clockInterval = setInterval(setClock, 1000);
 // -----------------------------------------------------
 function getQuestion() {
   // start the clock
@@ -79,7 +79,6 @@ function gameOver() {
 // -----------------------------------------------------
 function saveScore() {
   leaderboard.push(score);
-
   localStorage.setItem("yourScore", JSON.stringify(leaderboard));
 }
 // -----------------------------------------------------
@@ -94,4 +93,5 @@ $("#startQuiz").on("click", function () {
 });
 $("#saveScore").on("click", function () {
   saveScore();
+  getScore();
 });
