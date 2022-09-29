@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Code Quiz</title>
+  </head>
+  <section class="section" id="quizTimer">
+    Seconds Remaining: <span id="timer"></span>
+  </section>
+  <body>
+    <div class="container is-flex">
+      <div class="section">
+        <h1 class="title is-primary">Code Quiz</h1>
+        <h2 class="subtitle">
+          You have 75 seconds to complete the quiz. Test your knowledge!
+        </h2>
+        <button id="startQuiz" class="button is-primary">Start Quiz</button>
+      </div>
+    </div>
+    <div id="quizContainer" class="container hide">
+      <h2 id="questionTitle" class="subtitle is-full-width"></h2>
+      <ul class="column">
+        <div id="choices">
+          <button id="optionA" class="button is-primary">option A</button>
+          <button id="optionB" class="button is-primary">option B</button>
+          <button id="optionC" class="button is-primary">option C</button>
+          <button id="optionD" class="button is-primary">option D</button>
+        </div>
+      </ul>
+    </div>
+    <div class="container hide" id="scoresContainer">
+      <h2>Scores</h2>
+      <h2 id="scores"></h2>
+      <h3>Final Score:</h3>
+      <h3 id="finalScore"></h3>
+      <div class="column field">
+        <div class="control">
+          <input
+            id="initials"
+            class="input is-one-third"
+            type="text"
+            placeholder="Enter Initials"
+          />
+        </div>
+        <button id="saveScore" class="button is-primary">Save Score</button>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/questionList.js"></script>
+  <script src="./js/script.js"></script>
+</html>
